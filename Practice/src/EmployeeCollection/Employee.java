@@ -1,4 +1,4 @@
-package Collections;
+package EmployeeCollection;
 
 public class Employee {
 

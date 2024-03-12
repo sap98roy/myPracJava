@@ -1,4 +1,4 @@
-package Collections;
+package EmployeeCollection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Nth_Max_From_List {
+public class Nth_Highest_Salary {
 
 	public static void main(String[] args) {
 		

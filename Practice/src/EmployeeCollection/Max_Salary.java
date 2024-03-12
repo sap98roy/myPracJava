@@ -1,12 +1,14 @@
-package Collections;
+package EmployeeCollection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Group_By_Sex {
-
+public class Max_Salary {
+ 
 	public static void main(String[] args) {
 		
 		Employee emp1 = new Employee(34,"Ram", 18000.00, 'm');
@@ -23,11 +25,21 @@ public class Group_By_Sex {
 		emplist.add(emp5);
 		
 		
+		//Using Max function
+		Employee e1 = emplist.stream()
+							.max(Comparator.comparingDouble(Employee::getSalalry))
+							.get();
+		System.out.println(e1);
 		
-		Map<Character, Long> list = emplist
-								.stream()
-								.collect(Collectors.groupingBy(Employee::getSex,Collectors.counting()));
 		
-		System.out.println(list);
+		//using sorted method
+		Employee e2 = emplist.stream()
+							.sorted(Comparator.comparingDouble(Employee::getSalalry).reversed())
+							.collect(Collectors.toList())
+							.get(0);
+				
+		System.out.println(e2);
+			
+		
 	}
 }
