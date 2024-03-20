@@ -17,5 +17,11 @@ public class Sum_Of_Numbers {
 		double avg = list.stream().mapToInt(Integer::intValue).average().getAsDouble();
 		
 		System.out.println(avg);
+		
+		
+		//or
+		int[] arrays = {2,5,7,9,4};
+		int sumSim = Arrays.stream(arrays).sum();
+		System.out.println(sumSim);
 	}
 }

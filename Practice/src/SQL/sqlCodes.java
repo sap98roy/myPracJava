@@ -35,6 +35,11 @@ public class sqlCodes {
 	order by length(city)  desc, city asc LIMIT 2;
 
 
+	//find min in every depertment
+	 
+	 SELECT MIN(Price) as LowPrice, CategoryID 
+	 FROM Products 
+	 GROUP BY CategoryID;
 
 
 	//city starts with these
